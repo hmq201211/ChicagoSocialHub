@@ -1,0 +1,13 @@
+<div>
+    <button style="float:left"mat-raised-button color="primary" (click)="goHome()">HomePage</button>    
+    <button style="float:right" mat-raised-button color="primary" (click)="goBack()">go back</button>
+</div>
+<br><br>
+<h2>Divvy Station Status for {{ id }}</h2>
+<h3>Select Which Time Period You Want To View</h3>
+<select  [(ngModel)]="selected.value"  (change)="onchange($event.target.value)"  >
+  <option *ngFor="let option of options" [value]="option.value" >{{option.value}}</option>
+</select>
+<br><br>
+<svg width="900" height="500"></svg>
+

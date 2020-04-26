@@ -1,0 +1,14 @@
+<div>
+    <button style="float:left"mat-raised-button color="primary" (click)="goHome()">HomePage</button>    
+    <button style="float:right" mat-raised-button color="primary" (click)="goBack()">go back</button>
+</div>
+<br><br>
+<div>
+    <h3>Different Ways of Rating:</h3>
+    <select  [(ngModel)]="selectedDropDownOption.value"  (change)="onDropDownchange($event.target.value)">
+            <option *ngFor="let option of dropDownOptions" [value]="option.value" >{{option.value}}</option>
+    </select>
+</div>
+<br><br>
+<agm-map   (mapReady)="onMapLoad($event)">       
+</agm-map>
